@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Wielkości Lota</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lots Size Calculator</h1>
+        <form id="lotCalculator">
+            <label for="balance">Saldo konta (USD):</label>
+            <input type="number" id="balance" placeholder="Wpisz saldo" step="0.01" required>
+
+            <label for="risk">Ryzyko (%) na transakcję:</label>
+            <input type="number" id="risk" placeholder="Wpisz procent ryzyka" step="0.01" required>
+
+            <label for="stopLoss">Stop-Loss (pipsy):</label>
+            <input type="number" id="stopLoss" placeholder="Wpisz stop-loss" step="0.01" required>
+
+            <label for="pipValue">Wartość pipsa (USD/pip):</label>
+            <input type="number" id="pipValue" placeholder="Wartość pipsa" step="0.00001" required>
+
+            <button type="submit">Oblicz wielkość lota</button>
+        </form>
+
+        <div id="result">
+            <h2>Wynik:</h2>
+            <p>Wielkość lota: <span id="lotSize">0</span></p>
+        </div>
+    </div>
+
+    <div class="text-section">
+        <p><b>1 PIPS SL = 2.5 lots</b></p>
+        <p><b>2 PIPS SL = 1.25</b></p>
+        <p><b>1.5 PIPS SL = 1.67</b></p>
+        <p><b>2.5 PIPS SL = 1</b></p>
+    </div>
+    
+
+
+
+    <script src="javas.js"></script>
+</body>
+</html>
